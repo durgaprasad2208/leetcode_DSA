@@ -1,14 +1,8 @@
 class Solution {
     public int addDigits(int num) {
-        int currsum = 0;
-        while(num>9){
-            int r = num%10;
-             num = num/10;
-            currsum =currsum + r+num;
-            num = currsum;
-            currsum = 0;
-        }
-        return num;
+        if(num<=9 && num>=0 ) return num;
+        if(num%9==0) return 9;
+        else return num%9;
         
     }
 }
